@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import Link from 'next/link'
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
 const FlexContainer = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ const FlexContainer = styled.div`
   flex-flow: column wrap;
   max-width: 800px;
   margin-top: 3rem;
-`
+`;
 
 const Card = styled.div`
   padding: 1.5rem;
@@ -25,18 +26,23 @@ const Card = styled.div`
     color: #0070f3;
     border-color: #0070f3;
   }
-`
+`;
 
 const StyledA = styled.a`
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
-`
+`;
 
-const StyledLink = ({ href, name }) => (
+type styledLink = {
+  href: string;
+  name: string;
+};
+
+const StyledLink = ({ href, name }: styledLink) => (
   <Link href={href} passHref legacyBehavior>
     <StyledA>{name}</StyledA>
   </Link>
-)
+);
 
 export default function Cards() {
   return (
@@ -45,5 +51,5 @@ export default function Cards() {
         <StyledLink href="/about" name="About Page &rarr;" />
       </Card>
     </FlexContainer>
-  )
+  );
 }

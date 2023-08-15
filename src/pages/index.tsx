@@ -1,12 +1,14 @@
-import Head from 'next/head'
+import Head from "next/head";
+import React from "react";
+
+import Cards from "../components/cards";
 import {
   Container,
   Main,
   Title,
   Description,
   CodeTag,
-} from '../components/sharedstyles'
-import Cards from '../components/cards'
+} from "../components/sharedstyles";
 
 export default function Home() {
   return (
@@ -29,5 +31,5 @@ export default function Home() {
         <Cards />
       </Main>
     </Container>
-  )
+  );
 }
